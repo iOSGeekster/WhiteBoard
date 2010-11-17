@@ -1,0 +1,14 @@
+<project name="Whiteboard" default="compile" basedir=".">
+	<property name="src"  location="src"/>
+	<property name="classes"  location="WEB-INF\classes"/>
+	<property name="servlet-api"  location="..\lib\servlet-api.jar"/>
+	
+	<target name="compile" >
+		<!-- Compile the java code from ${src} into ${build} -->
+		<javac srcdir="${src}" destdir="${classes}" >
+			<classpath>
+				<pathelement location="..\..\lib\servlet-api.jar" />
+			</classpath>
+		</javac>
+	</target>
+</project>
