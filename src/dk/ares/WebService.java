@@ -20,6 +20,13 @@ import org.jdom.input.SAXBuilder;
 import org.jdom.output.Format;
 import org.jdom.output.XMLOutputter;
 
+/**
+ * 
+ * @author Jesper Nielsen
+ * Servlet class in the role of REST service
+ *
+ */
+
 public class WebService extends HttpServlet {
 
 	private static final String CONTEXT_SPECIFIC_PROJECT = "/projects/";
@@ -153,7 +160,7 @@ public class WebService extends HttpServlet {
 		List<Element> children = projects.getChildren();
 		Element elementToDelete = null;
 		for (Iterator<Element> childrenElements = children.iterator(); childrenElements.hasNext();) {
-			Element project = (Element) childrenElements.next();
+			Element project = childrenElements.next();
 			if(project.getAttribute("title").getValue().equalsIgnoreCase(projectTitle)){
 				elementToDelete = project;
 			}
