@@ -8,6 +8,7 @@
 		Something unexpected happened!
 		<br/>
 		<%= exception.getMessage() %>
+		<%= exception.getStackTrace().toString() %>
 		<br/>
 	</body>
 </html>

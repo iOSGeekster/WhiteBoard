@@ -4,7 +4,7 @@
 DocumentBuilderFactory docFactory = 
   DocumentBuilderFactory.newInstance();
   DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
-  Document doc = docBuilder.parse("http://localhost:8080/Whiteboard/projects");
+  Document doc = docBuilder.parse("http://localhost:8080/Taskboard/projects");
  %>
 <ul id="divProjects">
 <%  Element projects = doc.getDocumentElement();
