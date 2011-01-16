@@ -5,7 +5,7 @@ $(window).load(function() {
 function postNewProject(projectTitle){
 	$.ajax({
 		type: "POST",
-		url: "/Whiteboard/projects/"+encodeURI(projectTitle),
+		url: "/Taskboard/projects/"+encodeURI(projectTitle),
 		contentType	: 'application/x-www-form-urlencoded;charset=ISO-8859-1',
 		dataType	: 'xml',
 		success: updatePage()
@@ -19,7 +19,7 @@ function updatePage(){
 function getProject(name){
 	$.ajax({
 		type		: "GET",
-		url			: "/Whiteboard/projects/"+encodeURI(name),
+		url			: "/Taskboard/projects/"+encodeURI(name),
 		contentType	: 'application/x-www-form-urlencoded;charset=ISO-8859-1',
 		dataType	: 'xml',
 		success		: function(data){
@@ -31,7 +31,7 @@ function getProject(name){
 function deleteProject(projectName){
 	$.ajax( {
 		type : "DELETE",
-		url : "/Whiteboard/projects/"+encodeURI(projectName),
+		url : "/Taskboard/projects/"+encodeURI(projectName),
 		contentType	: 'application/x-www-form-urlencoded;charset=ISO-8859-1',
 		success: updatePage()
 	});

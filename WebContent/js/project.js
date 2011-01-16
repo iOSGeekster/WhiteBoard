@@ -8,7 +8,7 @@ $(window).load(function() {
 $(document).ready(function(){
 	initializeDialog();
 	projectTitle = $("#projectTitle").val();
-	$.PeriodicalUpdater('/Whiteboard/projects/'+encodeURI(projectTitle), {
+	$.PeriodicalUpdater('/Taskboard/projects/'+encodeURI(projectTitle), {
 		method 		: 'get',
 		minTimeout 	: 3000,
 		maxTimeout 	: 3000,
@@ -96,7 +96,7 @@ function updateTaskPos(id){
 	}
 	$.ajax({
 		type: "PUT",
-		url: "/Whiteboard/projects/"+encodeURI(projectTitle),
+		url: "/Taskboard/projects/"+encodeURI(projectTitle),
 		data: projectsXML,
 		processData : false,
 		contentType	: 'text/xml',
@@ -114,7 +114,7 @@ function postNewTask(newTask){
 	var xml = buildNewTask(newTask);
 	$.ajax({
 		type: "PUT",
-		url: "/Whiteboard/projects/"+encodeURI(projectTitle),
+		url: "/Taskboard/projects/"+encodeURI(projectTitle),
 		data: xml,
 		processData : false,
 		contentType	: 'text/xml',
@@ -147,7 +147,7 @@ function putNewMember(memberName, memberRole){
 	var xml = buildNewMember(memberName,memberRole);
 	$.ajax({
 		type: "PUT",
-		url:  "/Whiteboard/projects/"+encodeURI(projectTitle),
+		url:  "/Taskboard/projects/"+encodeURI(projectTitle),
 		data: xml,
 		processData: false,
 		contentType: 'text/xml',

@@ -11,10 +11,10 @@
 	<script type="text/javascript" src="../js/jquery-ui-1.8.4.custom.min.js"></script>
 	<script type="text/javascript" src="../js/jquery.periodicalupdater.js"></script>
 	<script type="text/javascript" src="../js/taskboard.js"></script>
-<title>WhiteBoard</title>
+<title>Taskboard</title>
 </head>
 <body>
-<h2 class="ui-widget-header ui-corner-all">Whiteboard - Select a project</h2>
+<h2 class="ui-widget-header ui-corner-all">Taskboard - Select a project</h2>
 <wb:projectList />
 <button id="btnAddProject" class="ui-button">Add project</button>
 <div id="dialog">

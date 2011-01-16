@@ -15,7 +15,7 @@ DocumentBuilderFactory docFactory =
 	for(int i = 0; i < projectList.getLength(); i++){
 		Node n = projectList.item(i);
 		%>
-		Title: <a href="/Whiteboard/jsp/project.jsp?title=<%= n.getAttributes().getNamedItem("title").getNodeValue()  %>"><%= n.getAttributes().getNamedItem("title").getNodeValue() %></a>
+		Title: <a href="/Taskboard/jsp/project.jsp?title=<%= n.getAttributes().getNamedItem("title").getNodeValue()  %>"><%= n.getAttributes().getNamedItem("title").getNodeValue() %></a>
 		<input id="btnDelete" type="button" value="Delete" onclick="deleteProject('<%= n.getAttributes().getNamedItem("title").getNodeValue() %>')"/>
 		<br/>
 	<%}
