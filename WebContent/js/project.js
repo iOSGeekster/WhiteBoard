@@ -9,14 +9,14 @@ $(document).ready(function(){
 	initializeDialog();
 	projectTitle = $("#projectTitle").val();
 	$.PeriodicalUpdater('/Taskboard/projects/'+encodeURI(projectTitle), {
-		method 		: 'get',
-		minTimeout 	: 3000,
-		maxTimeout 	: 3000,
-		multiplier 	: 1,
-		contentType	: 'application/x-www-form-urlencoded;charset=ISO-8859-1',
-		type 		: 'xml',
-		maxCalls 	: 0,
-		autoStop 	: 0
+        method      : 'get',
+        minTimeout  : 3000,
+        maxTimeout  : 3000,
+		multiplier  : 1,
+		contentType : 'application/x-www-form-urlencoded;charset=ISO-8859-1',
+		type        : 'xml',
+		maxCalls    : 0,
+		autoStop    : 0
 	},function(data){
 			updateTaskList(data);
 	});
@@ -26,18 +26,18 @@ function initializeDragMe(){
 	$(".dragme").draggable({
 		snap: ".dragme",
 		revert: "invalid",
-		start: function(event, ui){
+		start: function(){
 			moved = $(this).attr("id");
 		},
 		stack: ".dragme"
 	});
 	$("td").droppable({
-		drop: function(event, ui){
+		drop: function(){
 			updateTaskPos($(this).attr("id"));
 		},
 		tolerance: "intersect"
 	});
-};
+}
 
 function showMembers(){
 	$("#divMembers").empty();
